@@ -1,0 +1,29 @@
+#img1,#img2
+{
+position:absolute;
+border-radius:4px;
+}
+#img2
+{
+visibility:hidden;
+}
+.media
+{
+margin-left:300px;
+position:relative;
+height:320px;
+width:240px;
+}
+#but
+{
+margin-top:1px;
+margin-left:1px;
+padding:8px 8px;
+background-color:yellow;
+font-family:"arial";
+color:black;
+font-weight:bold;
+border:1px solid lightgreen;
+border-radius:1px;
+box-shadow:0px 0px 1px darkgreen;
+}

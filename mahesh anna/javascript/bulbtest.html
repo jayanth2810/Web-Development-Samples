@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function sample()
+{
+	element=document.getElementById("my");
+	
+	if(element.src.match("on.jpg"))
+	{
+		element.src="off.jpg";
+	}
+	
+	else
+	{
+		element.src="on.jpg";
+	}
+	
+}
+</script>
+
+<img id="my" onclick="sample()" src="off.jpg">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://w3schools.com/js/tryit_view.asp?x=0.47346028639003634 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body>
+<p>Click the button to loop through the properties of an object named "person".</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var txt="";
+var person={fname:"John",lname:"Doe",age:25}; 
+
+for (x in person)
+{
+txt=txt + person[x];
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+
+
+
+</body></html>

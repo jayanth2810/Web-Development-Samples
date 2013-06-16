@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://w3schools.com/js/tryit_view.asp?x=0.5191411578562111 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body>
+
+<p>Click the button to get a time-based greeting.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+var time=new Date().getHours();
+if (time<10)
+  {
+  x="Good morning";
+  }
+else if (time<20)
+  {
+  x="Good day";
+  }
+else
+  {
+  x="Good evening";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+
+
+
+</body></html>

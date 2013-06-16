@@ -1,0 +1,104 @@
+<html>
+	<head>
+	<script src="js/jquery-1.6.2.min.js"></script>
+	
+	
+		<title>
+			Test Page
+		</title>
+		<script>
+			$(function(){
+				
+				$('p').hide();
+				
+				$('h2').click(function(){
+					
+					$(this).parent().children().show();
+					
+					$(this).parent().siblings().children('p').hide();
+					
+				});
+				
+			});
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<div>
+			<div>
+				<h2>
+					header 1
+				</h2>
+				<p>
+					Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.
+Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				</p>
+				
+				
+			</div>
+			
+			<div>
+				<h2>
+					header 2
+				</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit risus, laoreet vitae pulvinar ac, ornare vitae diam. Aenean condimentum mollis magna quis interdum. Nunc volutpat eros varius neque consectetur eget blandit urna feugiat. Quisque suscipit pharetra sapien a luctus. Praesent turpis lectus, facilisis sit amet adipiscing ac, scelerisque nec purus. Aenean metus sem, feugiat non gravida et, egestas et arcu. In vestibulum tellus ac purus facilisis rutrum.
+				</p>
+				
+				
+			</div>
+			<div>
+				<h2>
+					header 3
+				</h2>
+				<p>
+					Integer eu tellus leo, in lobortis dui. Cras posuere venenatis enim, at accumsan erat elementum et. Fusce rhoncus laoreet turpis, eu malesuada enim consequat sed. Nam condimentum, nibh sed imperdiet aliquam, lacus erat cursus dolor, non fermentum leo felis mollis nunc. Nullam mauris orci, mattis sit amet rhoncus pharetra, porta a ipsum. Nulla facilisi. Nulla tincidunt, ante quis aliquet malesuada, arcu ipsum suscipit eros, id lacinia tortor felis non tortor.
+				</p>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		<div id=form>
+			<form method="post" action="register.php" id="form">
+			<ul>
+				<li class="company">
+				<label for="company">Company Name:<br/></label>
+				<input type="text" name="company" id="company" />
+				</li>
+			
+				<li class="owners">
+				<label for="owners">Owners:<br/></label>
+				<input type="text" name="owners" id="owners" />
+				</li>
+			
+				<li class="email">
+				<label for="email">Email:<br/></label>
+				<input type="text" name="email" id="email" />
+				</li>
+			
+				<li class="contact">
+				<label for="contact">Contact Number:<br/></label>
+				<input type="text" name="contact" id="contact" />
+				</li>
+			
+				<li class="contribution">
+					Are you willing to contribute?<br/>
+				<input type="radio" name="contribution" value="Yes" id ="contribution" /><label for="contribution1">Yes</label> <br />
+				<input type="radio" name="contribution" value="No" id="contribution" /><label for="contribution2"> No</label><br/>
+				</li>
+			</ul>
+		
+			
+			<input type="submit" value="submit"/>
+			
+		</form>		
+		</div>
+	</body>
+	
+	
+</html>

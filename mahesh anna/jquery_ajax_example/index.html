@@ -1,0 +1,83 @@
+
+<html>
+<head>
+
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+
+<script type="text/javascript">
+			$(function(){
+			$("#submit").click(function(){
+						
+						
+						//window.alert(contribution+"");
+						var company = $("#company").val();
+						var owners = $("#owners").val();
+						var email = $("#email").val();
+						var contact = $("#contact").val();
+						if($('#contribution1').is(':checked')) { var contribution='Yes' }
+						else if($('#contribution2').is(':checked')) { var contribution='No' }
+					
+						var dataString = 'company='+ company + '&owners=' + owners + '&email=' + email + '&contact=' + contact+ '&contribution=' + contribution;
+						
+						if(company=='' || owners=='' || email=='' || contact=='')
+						{
+						window.alert("Required field(s) empty");
+						}
+						else
+						{
+						$.ajax({
+						type: "POST",
+						url: "register.php",
+						data: dataString,
+						success: function(){
+						window.alert("Added successfully");
+						$('#form').each (function(){
+						  	this.reset();
+							});
+						}
+						});
+						}
+					
+					});
+		});
+
+</script>
+
+
+</head>
+
+	
+<body>
+
+<form method="post" action="register.php" id="form">
+			<ul>
+				<li class="company">
+				<input type="text" name="company" id="company" />
+				</li>
+			
+				<li class="owners">
+				<input type="text" name="owners" id="owners" />
+				</li>
+			
+				<li class="email">
+				<input type="text" name="email" id="email" />
+				</li>
+			
+				<li class="contact">
+				<input type="text" name="contact" id="contact" />
+				</li>
+			
+				<li class="contribution">
+					Are you willing to contribute?<br/>
+				<input type="radio" name="contribution" value="Yes" id ="contribution1" />Yes</label> <br />
+				<input type="radio" name="contribution" value="No" id="contribution2" />No</label><br/>
+				</li>
+			</ul>
+		
+			
+			<button type="button" id="submit">Register</button>
+			<input type="submit" value="Submit">
+		</form>		
+
+</body>
+</html>		

@@ -1,0 +1,135 @@
+body {
+    //background-image:url(image.jpg);
+	background-color:yellow;
+}
+
+a {
+    display: block;
+    padding: 48px 0;
+}
+
+#nav-list-example {
+    height: 132px;
+    width: 624px;
+	list-style:none;
+    margin: 48px 10px;
+}
+
+#one{
+    width: 132px;
+    height: 132px;
+    //float: left;
+    margin-right: 24px;
+    position: relative;
+	list-style:none;
+	overflow:hidden;
+	margin-left:200px;
+	margin-top:40px;
+}
+
+#two{
+    width: 132px;
+    height: 132px;
+    float: left;
+    margin-right: 24px;
+    position: relative;
+	list-style:none;
+	overflow:hidden;
+	margin-left:332.5px;
+	margin-top:-132px;
+}
+
+#three{
+    width: 132px;
+    height: 132px;
+    float: left;
+    margin-right: 24px;
+    position: relative;
+	list-style:none;
+	overflow:hidden;
+	margin-left:200px;
+	margin-top:0.5px;
+}
+
+#four{
+    width: 132px;
+    height: 132px;
+    float: left;
+    margin-right: 24px;
+    position: relative;
+	list-style:none;
+	overflow:hidden;
+	margin-left:332.5px;
+	margin-top:-131.5px;
+}
+
+#nav-list-example li div {
+    width: 132px;
+    height: 132px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.back {
+    left: -999em;
+    background: #999;
+}
+
+.back1{
+    left: -999em;
+    background: #999;
+}
+
+.back2{
+    left: -99em;
+    background: #999;
+}
+
+.back3 {
+    left: -999em;
+    background: #999;
+}
+
+#ans
+{
+	position:relative;	
+	
+	width:400px;
+	height:265px;
+	//background-color:black;
+	margin-left:550px;
+	margin-top:-180px;
+}
+/* Gradient 2 */
+#tb1{
+	
+	width:225px;
+	background: transparent url('bg.jpg') no-repeat;
+	color : #747862;
+	height:20px;
+	border:0;
+	padding:4px 2px;
+	
+	margin-left:36px;	
+	margin-top:10px;	
+}
+
+
+/* Rounded Corners */
+#b1 {
+	background: transparent url(buttonround.gif) no-repeat;
+	border: none;
+	outline: none;
+	margin-left:300px;	
+	margin-top:-40px;	
+	width:50px;
+	
+}
+#b1:hover {
+	background: transparent url(buttonhover.gif) no-repeat;
+	border: none;
+	outline: none;
+}

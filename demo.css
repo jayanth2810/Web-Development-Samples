@@ -1,0 +1,34 @@
+/* CSS reset */
+body,div,ul,ol,li{ 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+ol,ul {
+	list-style:none;
+}
+
+/* General Demo Style */
+body{
+	//font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	//background: #fff;
+	background-image:url(bg4.jpg);
+	font-weight: 400;
+	font-size: 15px;
+	color: #3a2127;
+	overflow-y: hidden;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}

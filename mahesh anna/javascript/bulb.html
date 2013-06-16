@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeimg()
+{
+	ele=document.getElementById('myimage');
+	if(ele.src.match("on.jpg"))
+	{
+	ele.src="off.jpg";
+	}
+
+	else
+	{
+	ele.src="on.jpg";
+	}
+	
+
+}
+</script>
+
+<img id="myimage" onclick="changeimg()" src="off.jpg"/>
+<p>Switch on the bulb if it is off or switch it off if it is on by clicking on the bulb</p>
+
+</body>
+</html>

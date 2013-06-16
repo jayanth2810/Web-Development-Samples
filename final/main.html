@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-css-transform.js"></script>
+<script type="text/javascript" src="rotate3Di.js"></script>
+
+</head>
+<body>
+<!--upper red block-->
+<div id="upper"></div>
+<!--upper ends-->
+
+<!--entire centre block-->
+<div id="content">
+<!--left of centre block,yellow color-->
+<div id="left">
+<div id="l1"  align="center"><br />About JUGAAD</div>
+<div id="l2" align="center"><br />CONNECT</div>
+<div id="l3" align="center"><br />COMPANIES</div>
+<div id="l4" align="center"><br />REGISTER</div>
+<div id="l5" align="center"><br />CONTACT</div>
+<div id="l6" align="center"><br />SPONSORS</div>
+</div>
+<!--left of centre block ends-->
+
+<!--middle of centre block,green color-->
+<div id="middle">
+<div id="m1"  align="center"><br />First</div>
+<div id="m2" align="center"><br />Second</div>
+<div id="m3" align="center"><br />Third</div>
+<div id="m4" align="center"><br />Fourth</div>
+<div id="m5" align="center"><br />Fifth</div>
+<div id="m6" align="center"><br />Sixth</div>
+
+
+
+</div>
+<!--middle of centre block ends-->
+
+<!--right of centre block,orange color-->
+<div id="right">
+
+<div id="r1">
+<div id="txt1" align="center">UPDATES</div>
+
+<ul id="updatedown">
+<li>news1hello this is a feed<br/></li>
+<li>news2hello this is a feed<br/></li>
+<li>news3hello this is a feed <br/></li>
+<li>news4hello this is a feed <br/></li>
+</ul>
+
+</div>
+
+<div id="r2">
+<div id="txt2" align="center">SPONSORS</div>
+
+<ul id="sponsordown">
+<li><img src="s1.jpg"  /></li>
+<li><img src="s2.jpg"  /></li>
+<li><img src="s3.jpg" /></li>
+<li><img src="s4.jpg"  /></li>
+<li><img src="s5.jpg"  /></li>
+</ul>
+
+</div>
+
+</div>
+<!--right of centre block ends-->
+
+</div>
+<script>
+$(document).ready(function(){
+	
+	
+	$("#updatedown").cycle({ 
+    fx:      'scrollDown', 
+    delay:   -4000,
+	pause: 1
+	
+});
+
+
+$('#l6').click(function () {
+    $('#middle').css('transform', 'rotate(360deg)');
+});
+
+	$("#l1").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","0em");
+			
+        });
+	$("#l2").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-25em");
+        });
+		$("#l2").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-25em");
+        });
+		$("#l3").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-50em");
+        });
+
+		$("#l4").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-75em");
+        });
+
+		$("#l5").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-100em");
+        });
+		$("#l6").click(function() {
+			var linkText = $(this).text();
+			$("#m1").css("margin-top","-125em");
+        });
+		
+		$("#sponsordown").cycle({ 
+		
+		fx:      'turnUp' ,
+		pause: 1,
+		delay:   -4000
+		
+		
+	
+});
+
+
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,566 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bookbank1;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import javax.microedition.io.Connector;
+import javax.microedition.io.HttpConnection;
+import javax.microedition.midlet.*;
+import javax.microedition.lcdui.*;
+import org.netbeans.microedition.lcdui.LoginScreen;
+
+/**
+ * @author Mani
+ */
+public class HelloMIDlet extends MIDlet implements CommandListener {
+    
+    private boolean midletPaused = false;
+    private String url = "http://localhost:8080/WebAppb/BookServlet";
+    //private TextBox tb=new TextBox("Your Cart","", 500,0);
+    int i;
+    int j;
+    private String status;
+    private String stru;
+    private String strq;
+    private String username;
+    private String password;
+    private String usernames[]={"vivek","fahn","kenzi","karen","akram"};
+    private String passwords[]={"anand","fennel","mccullum","kai","sakshi"};
+    //private Command okcmd=new Command("Return", Command.OK, 2);
+    //private Command okcmd1=new Command("Return it", Command.OK, 3);
+    
+    //private TextField tf=new TextField("bookname", "", 50, TextField.ANY);
+    
+//<editor-fold defaultstate="collapsed" desc=" Generated Fields ">                      
+    private Command exitCommand;
+    private Command okCommand;
+    private Command okCommand1;
+    private Command okCommand2;
+    private Command okCommand3;
+    private LoginScreen loginScreen;
+    private Alert alert;
+    private Form form;
+    private TextField textField;
+    private TextBox textBox;
+    private Alert alert1;
+    private Form form1;
+    private TextField textField1;
+    private Alert alert2;
+//</editor-fold>                    
+
+    /**
+     * The HelloMIDlet constructor.
+     */
+    public HelloMIDlet() {
+    }
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Methods ">                       
+//</editor-fold>                     
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: initialize ">                                           
+    /**
+     * Initializes the application. It is called only once when the MIDlet is
+     * started. The method is called before the
+     * <code>startMIDlet</code> method.
+     */
+    private void initialize() {                                         
+        // write pre-initialize user code here
+                                           
+        // write post-initialize user code here
+    }                            
+//</editor-fold>                          
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: startMIDlet ">                                        
+    /**
+     * Performs an action assigned to the Mobile Device - MIDlet Started point.
+     */
+    public void startMIDlet() {                                      
+        // write pre-action user code here
+        switchDisplayable(null, getLoginScreen());                                        
+        // write post-action user code here
+    }                             
+//</editor-fold>                           
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: resumeMIDlet ">                                         
+    /**
+     * Performs an action assigned to the Mobile Device - MIDlet Resumed point.
+     */
+    public void resumeMIDlet() {                                       
+        // write pre-action user code here
+                                         
+        // write post-action user code here
+    }                              
+//</editor-fold>                            
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: switchDisplayable ">                                              
+    /**
+     * Switches a current displayable in a display. The
+     * <code>display</code> instance is taken from
+     * <code>getDisplay</code> method. This method is used by all actions in the
+     * design for switching displayable.
+     *
+     * @param alert the Alert which is temporarily set to the display;
+     * if <code>null</code>, then <code>nextDisplayable</code> is set
+     * immediately
+     * @param nextDisplayable the Displayable to be set
+     */
+    public void switchDisplayable(Alert alert, Displayable nextDisplayable) {                                            
+        // write pre-switch user code here
+        Display display = getDisplay();                                               
+        if (alert == null) {
+            display.setCurrent(nextDisplayable);
+        } else {
+            display.setCurrent(alert, nextDisplayable);
+        }                                             
+        // write post-switch user code here
+    }                                   
+//</editor-fold>                                 
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: commandAction for Displayables ">                                                 
+    /**
+     * Called by a system to indicated that a command has been invoked on a
+     * particular displayable.
+     *
+     * @param command the Command that was invoked
+     * @param displayable the Displayable where the command was invoked
+     */
+    public void commandAction(Command command, Displayable displayable) {                                               
+        // write pre-action user code here
+        if (displayable == form) {                                           
+            if (command == okCommand1) {                                         
+                // write pre-action user code here
+                switchDisplayable(getAlert1(), getLoginScreen());                                           
+                // write post-action user code here
+            }                                           
+        } else if (displayable == form1) {
+            if (command == okCommand3) {                                         
+                // write pre-action user code here
+                switchDisplayable(getAlert2(), getLoginScreen());                                           
+                // write post-action user code here
+            }                                           
+        } else if (displayable == loginScreen) {
+            if (command == LoginScreen.LOGIN_COMMAND) {                                         
+               username=loginScreen.getUsername();
+             password=loginScreen.getPassword();
+             
+                method();                                           
+
+            }                                           
+        } else if (displayable == textBox) {
+            if (command == okCommand) {                                         
+                // write pre-action user code here
+                switchDisplayable(null, getForm());                                           
+                // write post-action user code here
+            } else if (command == okCommand2) {                                          
+                // write pre-action user code here
+                switchDisplayable(null, getForm1());                                            
+                // write post-action user code here
+            }                                                   
+        }                                                 
+      /*  if(displayable == tb) {
+          if(command == okcmd){
+                      
+                              switchDisplayable(null,getForm());
+                      
+          //  form3.insert(0,tf);
+            //form3.addCommand(okcmd1);
+            
+            //}
+        //}    
+        //if(displayable == form3)
+        //{
+          //      if(command == okcmd1) {
+                    
+            //    }
+        //}
+          }
+          }*/
+    }                                
+//</editor-fold>                              
+
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: exitCommand ">                                   
+    /**
+     * Returns an initialized instance of exitCommand component.
+     *
+     * @return the initialized component instance
+     */
+    public Command getExitCommand() {
+        if (exitCommand == null) {                                 
+            // write pre-init user code here
+            exitCommand = new Command("Exit", Command.EXIT, 0);                                   
+            // write post-init user code here
+        }                         
+        return exitCommand;
+    }
+//</editor-fold>                       
+
+
+
+
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: loginScreen ">                                   
+    /**
+     * Returns an initialized instance of loginScreen component.
+     *
+     * @return the initialized component instance
+     */
+    public LoginScreen getLoginScreen() {
+        if (loginScreen == null) {                                 
+            // write pre-init user code here
+            loginScreen = new LoginScreen(getDisplay());                                    
+            loginScreen.setLabelTexts("Username", "Password");
+            loginScreen.setTitle("loginScreen");
+            loginScreen.addCommand(LoginScreen.LOGIN_COMMAND);
+            loginScreen.setCommandListener(this);
+            loginScreen.setBGColor(-3355444);
+            loginScreen.setFGColor(0);
+            loginScreen.setUseLoginButton(false);
+            loginScreen.setLoginButtonText("Login");                                  
+            // write post-init user code here
+        }                         
+        return loginScreen;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Method: method ">                             
+    /**
+     * Performs an action assigned to the method if-point.
+     */
+    public void method() {                           
+                   for(i=0;i<5;i++)
+             {
+                 if(username.equals(usernames[i]))
+                 {
+                     if(password.equals(passwords[i]))
+                     {
+                         j=i;
+        
+                         if (true) {                                
+            try {
+                        HttpConnection c1 = (HttpConnection) Connector.open(url);
+                        c1.setRequestProperty("User-Agent","Profile/MIDP-1.0, Configuration/CLDC-1.0");
+                        c1.setRequestProperty("Content-Language","en-US");
+                        c1.setRequestMethod(HttpConnection.POST); 
+                        DataOutputStream os = (DataOutputStream)c1.openDataOutputStream();
+                         //DataOutputStream os = (DataOutputStream)c1.openDataOutputStream();
+                        System.out.println("second");
+                        if(j==0)
+                               stru="user1";
+                        else if(j==1)
+                                stru="user2";
+                        else if(j==2)
+                                stru="user3";
+                        else if(j==3)
+                                stru="user4";
+                        else
+                                stru="user5";
+                        System.out.println(stru);
+                        os.writeUTF(stru);
+                        os.flush();
+                        os.close();
+                        DataInputStream is =(DataInputStream)c1.openDataInputStream();
+                        //is = c.openInputStream();
+                        int ch;
+                        StringBuffer sb = new StringBuffer();
+                        while ((ch = is.read()) != -1) {
+                              sb.append((char)ch);
+                              System.out.println((char)ch);
+                        }
+
+                        //showAlert(sb.toString())
+                        status=sb.toString();
+                        System.out.println(status);
+                        //textBox.setString(status);
+                        
+                switchDisplayable(null, getTextBox());                                 
+                 
+            os.close();
+                        is.close();
+                        c1.close();
+              }
+                             catch (Exception e) {
+
+                  }
+                         } else {                                
+            // write pre-action user code here
+                             switchDisplayable(null, getAlert());                                 
+       
+                         }                             
+                     }}    }
+    }                     
+//</editor-fold>                   
+
+
+
+
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: alert ">                                   
+    /**
+     * Returns an initialized instance of alert component.
+     *
+     * @return the initialized component instance
+     */
+    public Alert getAlert() {
+        if (alert == null) {                                 
+            // write pre-init user code here
+            alert = new Alert("alert");                                    
+            alert.setTimeout(Alert.FOREVER);                                  
+            // write post-init user code here
+        }                         
+        return alert;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: form ">                                   
+    /**
+     * Returns an initialized instance of form component.
+     *
+     * @return the initialized component instance
+     */
+    public Form getForm() {
+        if (form == null) {                                 
+            // write pre-init user code here
+            form = new Form("Return Screen", new Item[]{getTextField()});                                    
+            form.addCommand(getOkCommand1());
+            form.setCommandListener(this);                                  
+            
+        }                         
+        return form;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: textField ">                                   
+    /**
+     * Returns an initialized instance of textField component.
+     *
+     * @return the initialized component instance
+     */
+    public TextField getTextField() {
+        if (textField == null) {                                 
+            // write pre-init user code here
+            textField = new TextField("Enter Book to return", null, 32, TextField.ANY);                                   
+            // write post-init user code here
+        }                         
+        return textField;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand ">                                   
+    /**
+     * Returns an initialized instance of okCommand component.
+     *
+     * @return the initialized component instance
+     */
+    public Command getOkCommand() {
+        if (okCommand == null) {                                 
+            // write pre-init user code here
+            okCommand = new Command("Return", Command.OK, 0);                                   
+            // write post-init user code here
+        }                         
+        return okCommand;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: textBox ">                                   
+    /**
+     * Returns an initialized instance of textBox component.
+     *
+     * @return the initialized component instance
+     */
+    public TextBox getTextBox() {
+        if (textBox == null) {                                 
+            // write pre-init user code here
+            textBox = new TextBox("textBox", null, 100, TextField.ANY);                                    
+            textBox.addCommand(getOkCommand());
+            textBox.addCommand(getOkCommand2());
+            textBox.setCommandListener(this);                                  
+           textBox.setString(status);
+        }                         
+        return textBox;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand1 ">                                   
+    /**
+     * Returns an initialized instance of okCommand1 component.
+     *
+     * @return the initialized component instance
+     */
+    public Command getOkCommand1() {
+        if (okCommand1 == null) {                                 
+            // write pre-init user code here
+            okCommand1 = new Command("confirm", Command.OK, 0);                                   
+            // write post-init user code here
+        }                         
+        return okCommand1;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: alert1 ">                                   
+    /**
+     * Returns an initialized instance of alert1 component.
+     *
+     * @return the initialized component instance
+     */
+    public Alert getAlert1() {
+        if (alert1 == null) {                                 
+            // write pre-init user code here
+            alert1 = new Alert("alert1", "Book must be returned within three days from now!!", null, null);                                    
+            alert1.setTimeout(Alert.FOREVER);                                  
+            // write post-init user code here
+        }                         
+        return alert1;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand2 ">                                   
+    /**
+     * Returns an initialized instance of okCommand2 component.
+     *
+     * @return the initialized component instance
+     */
+    public Command getOkCommand2() {
+        if (okCommand2 == null) {                                 
+            // write pre-init user code here
+            okCommand2 = new Command("Get books", Command.OK, 0);                                   
+            // write post-init user code here
+        }                         
+        return okCommand2;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand3 ">                                   
+    /**
+     * Returns an initialized instance of okCommand3 component.
+     *
+     * @return the initialized component instance
+     */
+    public Command getOkCommand3() {
+        if (okCommand3 == null) {                                 
+            // write pre-init user code here
+            okCommand3 = new Command("Register", Command.OK, 0);                                   
+            // write post-init user code here
+        }                         
+        return okCommand3;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: form1 ">                                   
+    /**
+     * Returns an initialized instance of form1 component.
+     *
+     * @return the initialized component instance
+     */
+    public Form getForm1() {
+        if (form1 == null) {                                 
+            // write pre-init user code here
+            form1 = new Form("Get Books", new Item[]{getTextField1()});                                    
+            form1.addCommand(getOkCommand3());
+            form1.setCommandListener(this);                                  
+            // write post-init user code here
+        }                         
+        return form1;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: alert2 ">                                   
+    /**
+     * Returns an initialized instance of alert2 component.
+     *
+     * @return the initialized component instance
+     */
+    public Alert getAlert2() {
+        if (alert2 == null) {                                 
+            // write pre-init user code here
+            alert2 = new Alert("alert2", "The requested book will be delivered in three days", null, null);                                    
+            alert2.setTimeout(Alert.FOREVER);                                  
+            // write post-init user code here
+        }                         
+        return alert2;
+    }
+//</editor-fold>                       
+
+//<editor-fold defaultstate="collapsed" desc=" Generated Getter: textField1 ">                                   
+    /**
+     * Returns an initialized instance of textField1 component.
+     *
+     * @return the initialized component instance
+     */
+    public TextField getTextField1() {
+        if (textField1 == null) {                                 
+            // write pre-init user code here
+            textField1 = new TextField("Enter book to search", null, 32, TextField.ANY);                                   
+            // write post-init user code here
+        }                         
+        return textField1;
+    }
+//</editor-fold>                       
+
+
+
+
+
+
+
+
+
+    /**
+     * Returns a display instance.
+     *
+     * @return the display instance.
+     */
+    public Display getDisplay() {
+        return Display.getDisplay(this);
+    }
+
+    /**
+     * Exits MIDlet.
+     */
+    public void exitMIDlet() {
+        switchDisplayable(null, null);
+        destroyApp(true);
+        notifyDestroyed();
+    }
+
+    /**
+     * Called when MIDlet is started. Checks whether the MIDlet have been
+     * already started and initialize/starts or resumes the MIDlet.
+     */
+    public void startApp() {
+        if (midletPaused) {
+            resumeMIDlet();
+        } else {
+            initialize();
+            startMIDlet();
+        }
+        midletPaused = false;
+    }
+
+    /**
+     * Called when MIDlet is paused.
+     */
+    public void pauseApp() {
+        midletPaused = true;
+    }
+
+    /**
+     * Called to signal the MIDlet to terminate.
+     *
+     * @param unconditional if true, then the MIDlet has to be unconditionally
+     * terminated and all resources has to be released.
+     */
+    public void destroyApp(boolean unconditional) {
+    }
+
+    /*private Displayable getform() {
+        Form form3=new Form("Return Form");
+        form3.insert(0,tf);
+        form3.addCommand(okcmd1);
+        return form3;
+        
+        
+    }*/
+}

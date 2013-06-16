@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://www.tizag.com/ajaxTutorial/ajaxxmlhttprequest.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><link rel="stylesheet" type="text/css" href="./Ajax Tutorial - XMLHttpRequest_files/widget100.css" media="all">
+<link rel="stylesheet" type="text/css" href="./Ajax Tutorial - XMLHttpRequest_files/default-overflow.css">
+<title>Ajax Tutorial - XMLHttpRequest</title>
+
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+						</script>
+						<script type="text/javascript">
+						  GS_googleAddAdSenseService('ca-pub-5396533251015167');
+						  GS_googleEnableAllServices();
+						</script>
+						<script type="text/javascript">
+						  GA_googleAddSlot('ca-pub-5396533251015167', 'Tizag_Ajax_Content_468x60');
+						  GA_googleAddSlot('ca-pub-5396533251015167', 'Tizag_Ajax_Skyscraper_160x600');
+						</script>
+						<script type="text/javascript">
+						  GA_googleFetchAds();
+						</script><style type="text/css"></style><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh512" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./Ajax Tutorial - XMLHttpRequest_files/sh105.htm"></iframe></div><script type="text/javascript" src="./Ajax Tutorial - XMLHttpRequest_files/core053.js"></script></head><body> <table class="outter" width="100%" align="center">	<tbody><tr><td class="banner" colspan="3" align="center"><a href="http://www.tizag.com/">	<img src="./Ajax Tutorial - XMLHttpRequest_files/tizagSugar.jpg" alt="Tizag Tutorials"></a>	</td></tr> 
+					<tr><td></td><td colspan="1" align="center">
+							<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-5396533251015167:alp9pg-b2u1">
+    <input type="hidden" name="ie" value="ISO-8859-1">
+    <input type="text" name="q" size="31" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;">
+    <input type="submit" name="sa" value="Search">
+  </div>
+<input name="siteurl" type="hidden" value="www.tizag.com/ajaxTutorial/ajaxxmlhttprequest.php"><input name="ref" type="hidden" value="www.tizag.com/ajaxTutorial/ajaxbrowsersupport.php"><input name="ss" type="hidden" value=""></form>
+<script language="Javascript">
+	<!--
+	if (top.location!= self.location) {
+	top.location = self.location.href
+	}
+	//-->
+	</script> 
+	<script type="text/javascript" src="./Ajax Tutorial - XMLHttpRequest_files/brand"></script></td></tr>
+</tbody></table><table class="outter" cellpadding="0" cellspacing="0" align="center"><tbody><tr><td></td></tr></tbody></table>
+<table class="outter" width="879" align="center"> 	<tbody><tr valign="top">	<td class="menu">		<table class="menu"><tbody><tr><td>	<div id="menu">		<a href="http://www.tizag.com/">Home</a> <hr><b>Web Tutorials</b><a href="http://www.tizag.com/beginnerT/">Beginner Tutorial</a>
+<a href="http://www.tizag.com/htmlT/">HTML Tutorial</a>
+<a href="http://www.tizag.com/cssT/">CSS Tutorial</a>
+<br><b>Scripting</b>
+<a href="http://www.tizag.com/javascriptT/">Javascript Tutorial</a>
+<a href="http://www.tizag.com/phpT/">PHP Tutorial</a>
+<a href="http://www.tizag.com/perlT/">Perl Tutorial</a>
+<a href="http://www.tizag.com/ajaxTutorial/">Ajax Tutorial</a>
+<a href="http://www.tizag.com/aspTutorial/">ASP Tutorial</a>
+<a href="http://www.tizag.com/vbscriptTutorial/">VBScript Tutorial</a>
+<br><b>Databases</b>
+<a href="http://www.tizag.com/sqlTutorial/">SQL Tutorial</a>
+<a href="http://www.tizag.com/mysqlTutorial/">MySQL Tutorial</a>
+<br><b>Miscellaneous</b>
+<a href="http://www.tizag.com/xmlTutorial/">XML Tutorial</a>
+<a href="http://www.tizag.com/webhost/">Webhost Tutorial</a>
+<a href="http://www.tizag.com/flashTutorial/">Flash Tutorial</a>
+<a href="http://www.tizag.com/SEOTutorial/">SEO Tutorial</a>
+<hr><b>Ajax Tutorial</b>
+<a href="http://www.tizag.com/ajaxTutorial/index.php">Ajax - Tutorial</a>
+<a href="http://www.tizag.com/ajaxTutorial/ajaxform.php">Ajax - Form</a>
+<a href="http://www.tizag.com/ajaxTutorial/ajaxbrowsersupport.php">Ajax - Browser Support</a>
+<a href="./Ajax Tutorial - XMLHttpRequest_files/Ajax Tutorial - XMLHttpRequest.htm"><font color="#003B62"><b style="text-decoration:underline;">Ajax - XMLHttpRequest</b></font></a>
+<a href="http://www.tizag.com/ajaxTutorial/ajaxphp.php">Ajax - PHP</a>
+<b>Advanced Ajax</b>
+<a href="http://www.tizag.com/ajaxTutorial/ajax-mysql-database.php">Ajax - MySQL</a>
+<a href="http://www.tizag.com/ajaxTutorial/ajax-javascript.php">Ajax - Javascript</a>
+Get Help!<a href="http://forums.tizag.com/forumdisplay.php?f=12">Ajax Forum</a><hr> <a href="http://www.tizag.com/about/contact.php">Contact Us</a> 	</div> 	</td></tr></tbody></table></td><td width="510"><table class="main" cellpadding="3"> <tbody><tr><td class="mainIn">
+<br><div align="center"><!-- AddThis Button BEGIN -->
+ 
+	<a href="http://www.addthis.com/bookmark.php" onclick="addthis_url   = location.href; addthis_title = document.title; return addthis_click(this);" target="_blank"><img src="./Ajax Tutorial - XMLHttpRequest_files/button1-bm.gif" width="125" height="16" border="0" alt="Bookmark and Share"></a> <script type="text/javascript">var addthis_pub = 'tizagadd';</script><script type="text/javascript" src="./Ajax Tutorial - XMLHttpRequest_files/widget.php"></script><!-- AddThis Button END --></div>
+
+
+<h1>Ajax - XMLHttpRequest Object</h1>
+<p>In the <a href="http://www.tizag.com/ajaxTutorial/ajaxbrowsersupport.php">Previous Lesson</a> you learned
+how to create an <i>XMLHttpRequest</i> object based on the type of web browser being used.
+This lesson will show you how to use your object to communicate directly with the server!</p>
+<div align="center">
+<script type="text/javascript">
+				  GA_googleFillSlot('Tizag_Ajax_Content_468x60');
+				</script><a href="http://www.tizag.com/about/advertise.php" rel="nofollow"><b>Advertise on Tizag.com</b></a>
+</div>
+
+<h1>Ajax - onreadystatechange Property</h1>
+<p>Before we even think about sending data to the server, we must first write a function
+that will be able to receive information. This function will be used to catch the data
+that is returned by the server. </p>
+
+<p>The <i>XMLHttpRequest</i> object has a special property called <i>onreadystatechange</i>. <i>onreadystatechange</i>
+stores the function that will process the response from the server. The following code defines an empty function 
+and sets the <i>onreadystatechange</i> property at the same time!</p>
+
+<p>We will be filling this function in throughout the lesson, as you learn more about the  <i>XMLHttpRequest</i> object.</p>
+
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">// Create a function that will receive data sent from the server
+<font color="red">ajaxRequest.onreadystatechange = function(){
+	// We still need to write some code here
+}</font>
+</pre></div>
+
+<p>This property, <i>onreadystatechange</i>, stores a function.  As the name sort of implies, every time 
+the "ready state" changes this function will be executed. What is this "ready state" and is
+it any use to us?</p>
+
+<h1>Ajax - readyState Property</h1>
+<p>The <i>XMLHttpRequest</i> object has another property called <i>readyState</i>.  This
+is where the status of our server's <i>response</i> is stored.  The <i>response</i> can be processing, downloading or completed. Each
+time the <i>readyState</i> changes then our <i>onreadystatechange</i> function executes.</p>
+
+<p>The only <i>readyState</i> that we are going to care about in this lesson is when our
+response is <i>complete</i> and we can get our hands on that information. So let's add
+an If Statement to our function to check if the response is <i>complete</i>. </p>
+
+<p><b>Note:</b> When the property <i>readyState</i> is 4 that means the response is complete
+and we can get our data.</p>
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">// Create a function that will receive data sent from the server
+ajaxRequest.onreadystatechange = function(){
+	<font color="red">if(ajaxRequest.readyState == 4){
+		// Get the data from the server's response
+	}</font>
+}
+</pre></div>
+
+<p>Now that we know how to check if the response is complete, we can
+access the property that stores the server's response, <i>responseText</i>.</p>
+
+<h1>Ajax - responseText Property</h1>
+<p>For simple Ajax applications, like this tutorial describes, you can retrieve
+the server's response by using the <i>responseText</i> property. Using
+a little bit of Javascript and HTML forms we can change our text box to
+equal <i>responseText</i>.</p>
+
+<p>In case you forgot, this tutorial is using Ajax to set an HTML text box to the server's time. 
+The HTML input we want to change is the "time" text box. Here's a little refresher
+on how to access form inputs with Javascript:</p>
+
+<ul>
+	<li>document.FormName.InputName.value</li>
+</ul>
+
+<p>Our form's name is "myForm" and the text box is "time".  Below is the code
+that will set our "time" text box to the server's time.</p>
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">// Create a function that will receive data sent from the server
+ajaxRequest.onreadystatechange = function(){
+	if(ajaxRequest.readyState == 4){
+		<font color="red">document.myForm.time.value = ajaxRequest.responseText;</font>
+	}
+}
+</pre></div>
+
+<p>Phew! That was a lot of new things we had to use to get our server's response, but now
+we can rest easy knowing we are ready to send off a request to the server.  Using Ajax, we can now ask our server for some data!</p>
+
+
+<h1>Ajax - Sending a Request for Information</h1>
+<p>Now that our <i>onreadystatechange</i> property has a proper response-handling function, we can send our request.
+Sending a request is comprised of two steps:</p>
+
+<ol>
+	<li>Specify the URL of server-side script that will be used in our Ajax application.</li>
+	<li>Use the send function to send off the request.</li>
+</ol>
+
+<p>Our simple PHP script, that we have yet to write, will be called "serverTime.php", so we
+can already do step 1.  The URL is set using the <i>open</i> method, which takes three arguments.
+The second argument is the important one, as it is the URL of our PHP script.</p>
+
+<p> Assuming that
+the HTML and PHP files are in the same directory, the code would be: </p>
+
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">// Create a function that will receive data sent from the server
+ajaxRequest.onreadystatechange = function(){
+	if(ajaxRequest.readyState == 4){
+		document.myForm.time.value = ajaxRequest.responseText;
+	}
+}
+<font color="red">ajaxRequest.open("GET", "serverTime.php", true);</font>
+</pre></div>
+
+<p>With all of our Javascript setup work complete, we can then use the <i>send</i> method
+to send our request to the server.</p>
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">// Create a function that will receive data sent from the server
+ajaxRequest.onreadystatechange = function(){
+	if(ajaxRequest.readyState == 4){
+		document.myForm.time.value = ajaxRequest.responseText;
+	}
+}
+ajaxRequest.open("GET", "serverTime.php", true);
+<font color="red">ajaxRequest.send(null); </font>
+</pre></div>
+
+<h1>Ajax - Finishing up "order.html"</h1>
+<p>Before we plug in our freshly written Javascript code into the "order.html" file,
+we need some way for the visitor to run our Ajax function. It might
+be kinda cool if our Ajax did its magic while the user was doing something on our webpage,
+so let's have our function run after the user enters their name.</p>
+
+<p>Using the <i>onChange</i> attribute, we can make it so our function is called
+whenever the user makes a change to the "username" text box.</p>
+
+<div class="codewrap"><h2 class="specialT">Javascript Code:</h2><pre class="code">&lt;input type='text' <font color="red">onChange="ajaxFunction();"</font> name='username' /&gt; &lt;br /&gt;
+</pre></div>
+
+<p>OK, now we are ready to completely update our "order.html" file to be 100% Ajax ready.</p>
+
+<div class="codewrap"><h2 class="specialT">order.html Updated Code:</h2><pre class="code">&lt;html&gt;
+&lt;body&gt;
+
+&lt;script language="javascript" type="text/javascript"&gt;
+&lt;!-- 
+//Browser Support Code
+function ajaxFunction(){
+	var ajaxRequest;  // The variable that makes Ajax possible!
+	
+	try{
+		// Opera 8.0+, Firefox, Safari
+		ajaxRequest = new XMLHttpRequest();
+	} catch (e){
+		// Internet Explorer Browsers
+		try{
+			ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try{
+				ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e){
+				// Something went wrong
+				alert("Your browser broke!");
+				return false;
+			}
+		}
+	}
+	<font color="red">// Create a function that will receive data sent from the server
+	ajaxRequest.onreadystatechange = function(){
+		if(ajaxRequest.readyState == 4){
+			document.myForm.time.value = ajaxRequest.responseText;
+		}
+	}
+	ajaxRequest.open("GET", "serverTime.php", true);
+	ajaxRequest.send(null); </font>
+}
+
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;form name='myForm'&gt;
+Name: &lt;input type='text' <font color="red">onChange="ajaxFunction();"</font> name='username' /&gt; &lt;br /&gt;
+Time: &lt;input type='text' name='time' /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+
+<h1>Ajax - Final Step</h1>
+<p>There were a lot of key steps covered in this lesson, so don't worry if you have
+to go back and read a few sections more than once.  When you're ready you can move
+on to the final step of making our Ajax complete: writing the "serverTime.php" script.</p>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-5396533251015167";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al";
+//2007-05-21: Link Ajax
+google_ad_channel = "9182666732";
+google_color_border = "D2E7F4";
+google_color_bg = "D2E7F4";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br>
+
+<div align="center"><!-- AddThis Button BEGIN -->
+		<a href="http://www.addthis.com/bookmark.php" onclick="addthis_url   = location.href; addthis_title = document.title; return addthis_click(this);" target="_blank"><img src="./Ajax Tutorial - XMLHttpRequest_files/button1-bm.gif" width="125" height="16" border="0" alt="Bookmark and Share"></a> <script type="text/javascript">var addthis_pub = 'tizagadd';</script><script type="text/javascript" src="./Ajax Tutorial - XMLHttpRequest_files/widget.php"></script>  
+<!-- AddThis Button END --></div>
+<br><br>
+<ul id="nav"><li class="back"><a href="http://www.tizag.com/ajaxTutorial/ajaxbrowsersupport.php">Go Back</a></li><li class="cont"><a href="http://www.tizag.com/ajaxTutorial/ajaxphp.php">Continue</a></li></ul><br><br><h1>Found Something Wrong in this Lesson?</h1><p><a href="http://www.tizag.com/about/report.php?tutorial=Ajax%20Tutorial&lesson=XMLHttpRequest" rel="nofollow">Report a Bug or Comment on This Lesson</a> - Your input is what keeps Tizag improving with time!</p></td></tr>			</tbody></table>		</td><td width="200">
+		<table class="rightCol">
+			<tbody><tr><td>
+
+			<div class="rightMenu">
+			<b>Web Reference</b><br>
+			<a class="menu" href="http://www.tizag.com/htmlT/reference/htmlreference.php">HTML Reference</a>
+			<a class="menu" href="http://www.tizag.com/cssT/reference.php">CSS Reference</a>
+			<a class="menu" href="http://www.tizag.com/cssT/liveExampleCss/">CSS Examples</a>
+			<a class="menu" href="http://www.tizag.com/phpT/examples/formex.php">PHP Examples</a>
+			<hr><b>Help Tizag Grow</b><br>			<a class="menu" href="http://www.tizag.com/about/linkus.php">Link to Tizag</a>
+	<a class="menu" href="http://www.tizag.com/store/">Tizag.com Store</a>
+			<hr>
+			</div>
+			</td></tr>
+		</tbody></table><table class="rightCol">
+			<tbody><tr><td>
+
+			<div class="rightMenu">
+			<a href="http://www.tizag.com/about/advertise.php" rel="nofollow"><b>Advertise Here</b></a><script type="text/javascript">
+					GA_googleFillSlot('Tizag_Ajax_Skyscraper_160x600');
+			</script>
+			<br>
+			<br>
+			<b>More Tutorials! </b><br>
+			<a class="menu" href="http://office.tizag.com/">Microsoft Office Tutorials</a>
+			<a class="menu" href="http://artist.tizag.com/">Artist Tutorials</a>
+			<hr>
+			
+			
+			</div></td></tr>
+		</tbody></table></td>		</tr><tr>			<td colspan="3">
+							
+					<p align="center" class="copyright">2003-2008 Erack Network | <a href="http://www.tizag.com/about/copy.php" rel="nofollow">Copyright</a> | <a href="http://www.tizag.com/about/privacy.php" rel="nofollow">Privacy Policy</a> |  <a href="http://www.tizag.com/about/advertise.php">Advertising Information</a>
+			
+							<br>Site design by <a href="http://www.epearl.net/">Seattle Web Design</a></p>
+		</td></tr>
+		</tbody></table>
+<script src="./Ajax Tutorial - XMLHttpRequest_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-138146-2";
+ urchinTracker();
+</script>
+
+		
+		</body></html>

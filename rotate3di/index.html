@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-css-transform.js"></script>
+<script type="text/javascript" src="rotate3Di.js"></script>
+
+</head>
+
+<body>
+
+<ul id="nav-list-example">
+    
+	
+	<li id="one">
+        <div class="front"><a href="#"></a></div>
+        <div class="back"><a href="#">1. Apples are a round fruit.</a></div>
+		<div id="ss"></div>
+	</li>
+	
+	<li id="two">
+        <div class="front1"><a href="#"></a></div>
+        <div class="back1"><a href="#">2. Oranges are a round fruit.</a></div>
+	</li>
+	
+	<li id="three">
+        <div class="front2"><a href="#"></a></div>
+        <div class="back2"><a href="#">3. Mangoes are a round fruit.</a></div>
+	</li>
+	
+	<li id="four">
+        <div class="front3"><a href="#"></a></div>
+        <div class="back3"><a href="#">4. Pears are a round fruit.</a></div>
+	</li>
+		
+</ul>
+
+<div id="ans">
+<form name="ans"> 
+        <input type="text" name="testbox" id="tb1" />
+		<input type="submit" value="ONE" id="b1" onclick="click_func();"/> 
+</form>
+</div>
+
+</body>
+
+<script>
+function click_func()
+{
+	$(".front").css('visibility','hidden');
+	$(".back").css('visibility','hidden');
+	$.get("ans.php",{ans: $("#tb1").val()}, function(responseText){$("#ss").html(responseText)});
+	
+}
+</script>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+$(document).ready(function () {
+    $('#nav-list-example li div.back').hide().css('left', 0);
+	$('#nav-list-example li div.back1').hide().css('left', 0);
+	$('#nav-list-example li div.back2').hide().css('left', 0);
+	$('#nav-list-example li div.back3').hide().css('left', 0);
+    
+    function mySideChange(front) {
+        if (front) {
+            $(this).parent().find('div.front').show();
+            $(this).parent().find('div.back').hide();
+            
+        } else {
+            $(this).parent().find('div.front').hide();
+            $(this).parent().find('div.back').show();
+        }
+    }
+    
+	function mySideChange1(front1) {
+        if (front1) {
+            $(this).parent().find('div.front1').show();
+            $(this).parent().find('div.back1').hide();
+            
+        } else {
+            $(this).parent().find('div.front1').hide();
+            $(this).parent().find('div.back1').show();
+        }
+    }
+    
+	function mySideChange2(front2) {
+        if (front2) {
+            $(this).parent().find('div.front2').show();
+            $(this).parent().find('div.back2').hide();
+            
+        } else {
+            $(this).parent().find('div.front2').hide();
+            $(this).parent().find('div.back2').show();
+        }
+    }
+    
+	function mySideChange3(front3) {
+        if (front3) {
+            $(this).parent().find('div.front3').show();
+            $(this).parent().find('div.back3').hide();
+            
+        } else {
+            $(this).parent().find('div.front3').hide();
+            $(this).parent().find('div.back3').show();
+        }
+    }
+    
+	
+    $('#one').hover(
+        function () {
+            $(this).find('div').stop().rotate3Di('flip', 250, {direction: 'clockwise', sideChange: mySideChange});
+        },
+        function () {
+            $(this).find('div').stop().rotate3Di('unflip', 500, {sideChange: mySideChange});
+        }
+    );
+	
+	$('#two').hover(
+        function () {
+            $(this).find('div').stop().rotate3Di('flip', 250, {direction: 'clockwise', sideChange: mySideChange1});
+        },
+        function () {
+            $(this).find('div').stop().rotate3Di('unflip', 500, {sideChange: mySideChange1});
+        }
+    );
+	
+	$('#three').hover(
+        function () {
+            $(this).find('div').stop().rotate3Di('flip', 250, {direction: 'clockwise', sideChange: mySideChange2});
+        },
+        function () {
+            $(this).find('div').stop().rotate3Di('unflip', 500, {sideChange: mySideChange2});
+        }
+    );
+	
+	$('#four').hover(
+        function () {
+            $(this).find('div').stop().rotate3Di('flip', 250, {direction: 'clockwise', sideChange: mySideChange3});
+        },
+        function () {
+            $(this).find('div').stop().rotate3Di('unflip', 500, {sideChange: mySideChange3});
+        }
+    );
+	
+	/*$('#b1').click(
+		function () {
+			$('.front').css("visibility","visible");
+			$('.back').css("visibility","visible");
+			$('#img1').css("visibility","visible");
+			//$('#b1').css("margin-top","5em");
+			//$('#b1').css("background-color","green");
+			//$('#b1').css("margin-left","5em");
+		});*/
+	
+		
+		
+});
+</script>
+</html>

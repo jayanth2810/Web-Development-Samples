@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://w3schools.com/js/tryit_view.asp?x=0.7688814557623118 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+
+var name=prompt("Please enter your name","Harry Potter");
+
+if (name!=null)
+  {
+  x="Hello " + name + "! How are you today?";
+  document.getElementById("demo").innerHTML=x;
+  }
+}
+</script>
+
+
+
+
+</body></html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://w3schools.com/js/tryit.asp?filename=tryjs_intro_alert -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Tryit Editor v1.6</title>
+<link rel="stylesheet" type="text/css" href="./25_files/tryit.css">
+<script type="text/javascript">
+function submitTryit()
+{
+var t=document.getElementById("pre_code").value;
+t=t.replace(/=/gi,"w3equalsign");
+var pos=t.search(/script/i)
+while (pos>0)
+	{
+	t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+	pos=t.search(/script/i);
+	}
+
+t=escape(t);document.getElementById("bt").value="1";
+	
+document.getElementById("code").value=t;
+document.getElementById("tryitform").action="tryit_view.asp?x=" + Math.random();
+validateForm();
+document.getElementById("tryitform").submit();
+}
+function validateForm()
+{
+var code=document.getElementById("code").value;
+if (code.length>5000)
+	{
+	document.getElementById("code").value="<h1>Error</h1>";
+	}
+}
+
+window.onload=function(){submitTryit()}
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./25_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<script type="text/javascript">
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script><style type="text/css"></style>
+<script type="text/javascript">
+googletag.defineSlot('/16833175/TopRectangle', [227, 90], 'div-gpt-ad-1343810007679-5').addService(googletag.pubads());
+googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1343810007679-6').addService(googletag.pubads());
+googletag.pubads().setTargeting("content","tryjs");
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script>
+</head>
+<body>
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<div style="width:960px;height:94px;position:relative;margin:0px;margin-left:auto;margin-right:auto;margin-top:5px;margin-bottom:5px;padding:0px;overflow:hidden">
+<!-- TopRectangle -->
+<div id="div-gpt-ad-1343810007679-5" style="width:227px; height:90px;">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1343810007679-5');
+</script>
+</div>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- TryitLeaderboard -->
+<div id="div-gpt-ad-1343810007679-6" style="width:728px; height:90px;">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1343810007679-6');
+</script>
+</div>
+</div></div>
+</div>
+
+<form style="margin:0px" action="./25_files/tryit_view.htm" method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
+
+<table border="0" class="maintable">
+<tbody><tr>
+<td width="50%">
+
+<div class="result_header" style="float:left;width:200px;margin-top:8px;">Source Code:</div>
+<input style="font-family:verdana;float:right;" type="button" value="Submit Code »" onclick="submitTryit()">
+<div style="clear:both;"></div>
+
+</td>
+<td><div class="result_header" style="margin-top:8px;">Result:</div></td>
+</tr>
+<tr>
+<td valign="top">
+
+<textarea class="code_input" width="100%" height="400px" id="pre_code" wrap="logical" style="height: 451px;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First JavaScript&lt;/h1&gt;
+
+&lt;p&gt;
+JavaScript can react to events. Like the click of a button:
+&lt;/p&gt;
+
+&lt;button type="button" onclick="alert('Welcome!')"&gt;Click Me!&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt; 
+
+</textarea>
+<input type="hidden" name="code" id="code" value="%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%3Cbody%3E%0A%0A%3Ch1%3EMy%20First%20Javaw3Scrw3ipttag%3C/h1%3E%0A%0A%3Cp%3E%0AJavaw3Scrw3ipttag%20can%20react%20to%20events.%20Like%20the%20click%20of%20a%20button%3A%0A%3C/p%3E%0A%0A%3Cbutton%20typew3equalsign%22button%22%20onclickw3equalsign%22alert%28%27Welcome%21%27%29%22%3EClick%20Me%21%3C/button%3E%0A%0A%3C/body%3E%0A%3C/html%3E%20%0A%0A">
+<input type="hidden" id="bt" name="bt" value="1">
+
+</td>
+<td valign="top">
+<iframe id="viewIFRAME" class="result_output" width="100%" height="400px" frameborder="0" name="view" src="./25_files/tryit_view.htm" style="height: 451px;"></iframe>
+<script>
+function resizeHeight(elmnt)
+{
+if (window)
+	{
+	var x=window.innerHeight
+	if (x)
+		{
+		var y=(x-205);
+		if (y>400)
+			{
+			document.getElementById("pre_code").style.height=y + "px";
+			document.getElementById("viewIFRAME").style.height=y + "px";
+			}
+		}
+	}
+}
+resizeHeight()
+window.onresize=function(){resizeHeight()}
+</script>
+</td>
+</tr>
+<tr>
+<td align="left" class="bottomtext">
+Edit the code above and click "Submit Code" to see the result.
+</td>
+<td align="right" class="bottomtext">
+<a style="color:#617f10" href="http://www.w3schools.com/">W3Schools.com</a> - Try it yourself&nbsp;
+</td>
+</tr>
+</tbody></table>
+
+	</form>
+
+
+</body></html>

@@ -1,0 +1,222 @@
+<html>
+<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<title>K Startup Corner</title>
+
+		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+
+		<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript"  src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+		<link href='http://fonts.googleapis.com/css?family=Uncial+Antiqua' rel='stylesheet' type='text/css'>
+		
+		<style type="text/css" >
+			p {font: 82.5% "Trebuchet MS", sans-serif; margin: 50px;}
+			h1 {font: 200% 'Uncial Antiqua', cursive; }
+			label {font: 82.5% "Trebuchet MS", sans-serif; }
+			#tabs-1{display: block;}
+			#tabs-2{display: none;}
+			#tabs-3{display: none;}
+			form {padding: 50px;}
+			.image{ margin-top: -100px;}
+			.center{ margin-right: auto;margin-left: auto;width: 70%}
+			.submit{margin-left: 50px;}
+		</style>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('#tabs').tabs();
+				//$('#switcher').themeswitcher();
+				$( "#radio" ).buttonset();
+				
+				var i=1;
+				$("#submit").click(function(){
+						
+						
+						//window.alert(contribution+"");
+						var company = $("#company").val();
+						var owners = $("#owners").val();
+						var email = $("#email").val();
+						var contact = $("#contact").val();
+						if($('#contribution1').is(':checked')) { var contribution='Yes' }
+						else if($('#contribution2').is(':checked')) { var contribution='No' }
+					
+						var dataString = 'company='+ company + '&owners=' + owners + '&email=' + email + '&contact=' + contact+ '&contribution=' + contribution;
+						
+						if(company=='' || owners=='' || email=='' || contact=='')
+						{
+						window.alert("Required field(s) empty");
+						}
+						else
+						{
+						$.ajax({
+						type: "POST",
+						url: "register.php",
+						data: dataString,
+						success: function(){
+						window.alert("Added successfully");
+						$('#form').each (function(){
+						  	this.reset();
+							});
+						}
+						});
+						}
+					
+					});
+				
+				$("#radio1").click(function(){
+					
+					$('#tabs-1').stop(false,true);
+					$('#tabs-2').stop(false,true);
+					$('#tabs-3').stop(false,true);
+					
+					if($('#tabs-2').is(":visible"))
+					$('#tabs-2').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-1').fadeIn();});
+					if($('#tabs-3').is(":visible"))
+					$('#tabs-3').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-1').fadeIn();});
+					if(!(('#tabs-1').is(":visible")))
+					$('#tabs-1').fadeIn();
+					
+				});
+				/*$(".submit").click(function() {
+					jAlert('This is a custom alert box', 'Alert Dialog');
+				});*/
+				$("#radio2").click(function(){
+					$('#tabs-1').stop(false,true);
+					$('#tabs-2').stop(false,true);
+					$('#tabs-3').stop(false,true);
+					
+					if($('#tabs-1').is(":visible"))
+					$('#tabs-1').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-2').fadeIn();});
+					if($('#tabs-3').is(":visible"))
+					$('#tabs-3').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-2').fadeIn();});
+					if(!(('#tabs-2').is(":visible")))
+					$('#tabs-2').fadeIn();
+					
+					
+					
+					
+				});
+				$("#radio3").click(function(){
+					
+					//window.alert("hey");
+					
+					$('#tabs-1').stop(false,true);
+					$('#tabs-2').stop(false,true);
+					$('#tabs-3').stop(false,true);
+					
+					if($('#tabs-1').is(":visible"))
+					$('#tabs-1').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-3').fadeIn();});
+					if($('#tabs-2').is(":visible"))
+					$('#tabs-2').hide("slide", { direction: "left" }, 1000,function(){$('#tabs-3').fadeIn();});
+					if(!(('#tabs-3').is(":visible")))
+					$('#tabs-3').fadeIn();
+				});
+				
+				
+				
+				
+
+				
+			});
+
+				
+				
+		
+		</script>
+
+
+</head>
+
+	
+<body>
+	<div id="switcher"></div>
+	<div align="center"><img width="350px" height="80px" src="k 12 logo.png"  alt="Kurukshetra 2012"/><h1>CEG STARTUP CORNER</h1>	
+	</div>
+	<div id="radio" align="center">
+		<input type="radio" id="radio1" name="radio" checked="checked"/><label for="radio1">Event</label>
+		<input type="radio" id="radio2"  name="radio"/><label for="radio2">Register</label>
+		<input type="radio" id="radio3" name="radio" /><label for="radio3">Contact</label>
+	</div>
+
+	<div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-all">
+		<p align="center"><i>"It is always the start that requires the greatest effort" - James Cash Penney</i></p>
+		<p>Every start-up at some point of time is in need of an Angel investor who would invest in them...<br/>Kurukshetra 2012 presents first of its kind <b>'CEG START-UP CORNER'</b>, giving an <strong>exclusive opportunity to CEG start-ups</strong> to brand their company and showcase their business plans in front of corporates and students. This is the place where you get to assess yourself and even impress the Venture Capitalists. This unique event gives start-ups a platform to <strong>network with industry experts, investment bankers and venture capitalists</strong>. It is also an great opportunity to interact with various other start-ups, motivate students and inspire them to be future entrepreneurs.This is also a great way to make your establishment in the start-up community.</p>
+	<p>The Event Structure is as follows: 
+	<br/>
+	
+	<ul style="font: 82.5% 'Trebuchet MS', sans-serif; margin-left: 50px;margin-top: -50px;margin-bottom: 50px">
+		<li>Each Start-up will be given a 5-7 min presentation slot. <br/>The session can include:</li>
+		<li>Brief about your company - year, field , technology involved(if any).</li>
+		<li>Initial idea and inspiration, first step taken.</li>
+		<li>Steps to bring it to reality.</li>
+		<li>No. of employees , scope , scalability , growth , involvement of students, reach.</li>
+		<li>Future plans.</li>
+		<li><strong>Kindly refrain from product marketing.</strong></li>
+	</ul></p>
+	</div>
+
+	<div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-all">
+	
+		<form method="post" action="register.php" id="form">
+			<ul>
+				<li class="company">
+				<label for="company">Company Name:<br/></label>
+				<input type="text" name="company" id="company" />
+				</li>
+			
+				<li class="owners">
+				<label for="owners">Owners:<br/></label>
+				<input type="text" name="owners" id="owners" />
+				</li>
+			
+				<li class="email">
+				<label for="email">Email:<br/></label>
+				<input type="text" name="email" id="email" />
+				</li>
+			
+				<li class="contact">
+				<label for="contact">Contact Number:<br/></label>
+				<input type="text" name="contact" id="contact" />
+				</li>
+			
+				<li class="contribution">
+					Are you willing to contribute?<br/>
+				<input type="radio" name="contribution" value="Yes" id ="contribution1" /><label for="contribution1">Yes</label> <br />
+				<input type="radio" name="contribution" value="No" id="contribution2" /><label for="contribution2"> No</label><br/>
+				</li>
+			</ul>
+		
+			
+			<button type="button" id="submit">Register</button>
+			<input type="submit" value="Submit">
+		</form>		
+	</div>
+
+<div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-all"><p>
+	<ul style="margin: 25px;">
+	<li>
+		<strong>Sindhu Krishna</strong><br/>
+		9840351104<br/>s.sindhukrishna@gmail.com
+	</li><br/>
+	<li>
+		<strong>Sristi Khanna</strong><br/>
+		9884384406<br/>s.sindhukrishna@gmail.com
+	</li><br/>
+	<li>
+		<strong>Praveen</strong><br/>
+		9790832227<br/>praveenramesh1991gmail.com
+	</li>
+	
+	
+	</ul>
+</p></div>
+
+	
+	
+</body>
+
+</html>

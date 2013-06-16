@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.flip.js"></script>
+<script type="text/javascript" src="jquery.flip.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="flipper">hi hello</div>
+<div id="img1"><img src="s3.jpg"></div>
+
+</body>
+
+<script>
+
+/*$(document).ready(function(){
+
+$("#flipper").flip({
+	direction:'rl',
+	content:$("#img1")
+})
+
+});*/
+
+$("#flipper").hover(
+  function () {
+		$("#flipper").flip({
+	direction:'rl',
+	content:$("#img1")
+})
+
+  },
+  function () {
+    	$(this).revertFlip();
+		$("#img1").css("visibility","hidden");
+	
+  }
+);
+
+</script>
+</html>
